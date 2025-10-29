@@ -4,11 +4,11 @@ from pathlib import Path
 
 block_cipher = None
 
-project_root = Path(__file__).resolve().parent.parent
+project_root = Path(SPECPATH).resolve().parent
 config_example = project_root / "config.example.json"
 
 a = Analysis(
-    ['cleaner/__main__.py'],
+    [str(project_root / 'cleaner' / '__main__.py')],
     pathex=[],
     binaries=[],
     datas=[(str(config_example), 'resources')],
