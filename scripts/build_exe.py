@@ -28,25 +28,7 @@ def run_pyinstaller() -> None:
         "--clean",
         str(SPEC_PATH),
     ]
-
-    try:
-        result = subprocess.run(
-            cmd,
-            check=True,
-            capture_output=True,
-            text=True,
-        )
-    except subprocess.CalledProcessError as exc:  # pragma: no cover - exercised in CI
-        if exc.stdout:
-            print(exc.stdout)
-        if exc.stderr:
-            print(exc.stderr)
-        raise
-
-    if result.stdout:
-        print(result.stdout)
-    if result.stderr:
-        print(result.stderr)
+    subprocess.run(cmd, check=True)
 
 
 def bundle_artifact() -> Path:
