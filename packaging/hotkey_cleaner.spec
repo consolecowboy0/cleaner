@@ -5,11 +5,12 @@ from pathlib import Path
 block_cipher = None
 
 project_root = Path(__file__).resolve().parent.parent
+script_path = project_root / "cleaner" / "__main__.py"
 config_example = project_root / "config.example.json"
 
 a = Analysis(
-    ['cleaner/__main__.py'],
-    pathex=[],
+    [str(script_path)],
+    pathex=[str(project_root)],
     binaries=[],
     datas=[(str(config_example), 'resources')],
     hiddenimports=[],
