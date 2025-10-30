@@ -1,18 +1,20 @@
 # -*- mode: python ; coding: utf-8 -*-
 
 from pathlib import Path
+import os
 
 block_cipher = None
 
-project_root = Path(__file__).resolve().parent.parent
+# Use SPECPATH which is always available in PyInstaller spec files
+project_root = Path(SPECPATH).resolve().parent
 config_example = project_root / "config.example.json"
 
 a = Analysis(
-    ['cleaner/__main__.py'],
-    pathex=[],
+    [str(project_root / 'run.py')],
+    pathex=[str(project_root)],
     binaries=[],
     datas=[(str(config_example), 'resources')],
-    hiddenimports=[],
+    hiddenimports=['cleaner', 'cleaner.__main__', 'cleaner.config', 'cleaner.runner', 'cleaner.cleanup'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
