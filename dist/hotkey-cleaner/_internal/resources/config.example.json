@@ -1,0 +1,9 @@
+{
+  "folder": "C:/Users/you/Videos/Temp",
+  "hotkey": "ctrl+alt+delete",
+  "send_to_recycle_bin": false,
+  "empty_recycle_bin": true,
+  "delete_folder_itself": false,
+  "recreate_folder": true,
+  "suppress_notifications": true
+}
