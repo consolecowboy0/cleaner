@@ -105,3 +105,18 @@ inside the terminal to stop the listener.
 - Consider disabling `empty_recycle_bin` until you are confident everything is
   being deleted correctly.
 - Keep regular backups of important files to guard against accidental deletion.
+
+## A Quick Cleaner Tale
+
+Mira kept a "Projects" folder that swelled with draft videos, raw audio, and
+half-finished renders after every late-night editing sprint. One evening she
+noticed the folder had ballooned to hundreds of gigabytes, forcing her to pause
+mid-export while she rummaged through the file tree, deleting clips one by one.
+
+The next day she configured the Cleaner hotkey to watch that chaotic folder and
+bound it to <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>C</kbd>. Now, whenever a final
+render is complete, she taps the shortcut, watches the console confirm the
+cleanup, and the folder snaps back to a tidy staging area ready for the next
+idea. Instead of spending minutes sorting leftovers, Mira jumps straight into
+the creative work she loves, confident that Cleaner has already swept the
+digital studio floor.
